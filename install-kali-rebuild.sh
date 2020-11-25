@@ -40,9 +40,9 @@ then
 
 	echo "Install Telegram..."
 	if [ $(uname -r | grep "amd64") ];then
-		wget "https://telegram.org/dl/desktop/linux" -O telegram.tar.xz
+		cd /opt; wget "https://telegram.org/dl/desktop/linux" -O telegram.tar.xz
 	else
-		wget "https://telegram.org/dl/desktop/linux32" -O telegram.tar.xz
+		cd /opt; wget "https://telegram.org/dl/desktop/linux32" -O telegram.tar.xz
 	fi
 
 	sudo tar Jxf telegram.tar.xz -C /opt/
@@ -92,7 +92,7 @@ then
 	echo "Install GCC para Windows..."
 	sudo apt install mingw-w64 wine -y
 	sudo dpkg --add-architecture i386 && sudo apt-get update -y && sudo apt-get install wine32 -y
-	
+
 	echo "Install dirsearch..."
 	cd /opt; sudo git clone https://github.com/maurosoria/dirsearch.git
 	#cd dirsearch
