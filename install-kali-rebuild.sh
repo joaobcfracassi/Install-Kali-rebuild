@@ -12,8 +12,7 @@ echo "##########################################################################
 
 read -p "Deseja continuar? [y/n] " op
 
-if [ $op == "y"];
-then
+if [ $op == 'y' ]; then
 	echo "Update system...."
 	sudo apt update; sudo apt upgrade -y; sudo apt dist-upgrade -y
 
